@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Areas/Admin/Views/Shared/_SharedAdminLayout.cshtml";
+}
+
+@model List<Bibliothek.Model.Entity.Category>
+
+<div class="container-fluid">
+    <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/Admin/Home/Index">Ana Sayfa</a></li>
+        <li class="breadcrumb-item">Kategoriler</li>
+        <li class="breadcrumb-item">Kategorileri Listele</li>
+        <li class="breadcrumb-item"><a href="/Admin/Category/Add">Kategori Ekle</a></li>
+    </ul>
+    <hr>
+    <div class="col-md-4" style="margin-top:20px;">
+        <table class="table table-bordered table-striped">
+            <thead style="background-color:deepskyblue;color:white">
+                <tr>
+                    <th>Kategori İsmi</th>
+                    <th colspan="2">Güncelle / Sil</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Name</td>
+                        <td>
+                            <a href="/Admin/Category/Update/@item.ID"><i class="fa fa-edit fa-2x" style="margin-left:20px;"></i></a>
+
+                            <a href="/Admin/Category/Delete/@item.ID"><i class="fa fa-trash-o fa-2x" style="margin-left:30px;"></i></a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

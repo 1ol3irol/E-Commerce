@@ -1,0 +1,92 @@
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.UI\bin\Bibliothek.UI.dll.config
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.UI\bin\Bibliothek.UI.dll
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.UI\bin\Bibliothek.UI.pdb
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.UI\bin\Bibliothek.Core.dll
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.UI\bin\Bibliothek.Model.dll
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.UI\bin\Bibliothek.Service.dll
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.UI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.UI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.UI\bin\System.Web.Helpers.dll
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.UI\bin\System.Web.Mvc.dll
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.UI\bin\System.Web.Razor.dll
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.UI\bin\System.Web.Webpages.Deployment.dll
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.UI\bin\System.Web.Webpages.dll
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.UI\bin\System.Web.Webpages.Razor.dll
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.UI\bin\EntityFramework.dll
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.UI\bin\Bibliothek.Utility.dll
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.UI\bin\Bibliothek.DAL.dll
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.UI\bin\Bibliothek.MAP.dll
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.UI\bin\Bibliothek.Core.pdb
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.UI\bin\Bibliothek.Core.dll.config
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.UI\bin\Bibliothek.Model.pdb
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.UI\bin\Bibliothek.Service.pdb
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.UI\bin\Bibliothek.Service.dll.config
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.UI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.UI\bin\System.Web.Razor.xml
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.UI\bin\System.Web.Webpages.xml
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.UI\bin\System.Web.Webpages.Deployment.xml
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.UI\bin\System.Web.Webpages.Razor.xml
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.UI\bin\System.Web.Helpers.xml
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.UI\bin\System.Web.Mvc.xml
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.UI\bin\EntityFramework.xml
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.UI\bin\Bibliothek.Utility.pdb
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.UI\bin\Bibliothek.DAL.pdb
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.UI\bin\Bibliothek.DAL.dll.config
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.UI\bin\Bibliothek.MAP.pdb
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.UI\bin\Bibliothek.MAP.dll.config
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.UI\obj\Debug\Bibliothek.UI.csprojResolveAssemblyReference.cache
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.UI\obj\Debug\Bibliothek.UI.csproj.CoreCompileInputs.cache
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.UI\obj\Debug\Bibliothek.UI.dll
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.UI\obj\Debug\Bibliothek.UI.pdb
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.UI\bin\EntityFramework.SqlServer.dll
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.UI\bin\PagedList.dll
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.UI\bin\PagedList.Mvc.dll
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.UI\bin\EntityFramework.SqlServer.xml
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.UI\bin\PagedList.xml
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.UI\bin\PagedList.Mvc.xml
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.UI\bin\Bibliothek.UI.dll.config
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.UI\bin\Bibliothek.UI.dll
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.UI\bin\Bibliothek.UI.pdb
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.UI\bin\Bibliothek.Core.dll
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.UI\bin\Bibliothek.DAL.dll
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.UI\bin\Bibliothek.Model.dll
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.UI\bin\Bibliothek.Service.dll
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.UI\bin\Bibliothek.Utility.dll
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.UI\bin\EntityFramework.dll
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.UI\bin\EntityFramework.SqlServer.dll
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.UI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.UI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.UI\bin\PagedList.dll
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.UI\bin\PagedList.Mvc.dll
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.UI\bin\System.Web.Helpers.dll
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.UI\bin\System.Web.Mvc.dll
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.UI\bin\System.Web.Razor.dll
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.UI\bin\System.Web.Webpages.Deployment.dll
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.UI\bin\System.Web.Webpages.dll
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.UI\bin\System.Web.Webpages.Razor.dll
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.UI\bin\Bibliothek.MAP.dll
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.UI\bin\Bibliothek.Core.pdb
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.UI\bin\Bibliothek.Core.dll.config
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.UI\bin\Bibliothek.DAL.pdb
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.UI\bin\Bibliothek.DAL.dll.config
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.UI\bin\Bibliothek.Model.pdb
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.UI\bin\Bibliothek.Service.pdb
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.UI\bin\Bibliothek.Service.dll.config
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.UI\bin\Bibliothek.Utility.pdb
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.UI\bin\EntityFramework.xml
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.UI\bin\EntityFramework.SqlServer.xml
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.UI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.UI\bin\PagedList.xml
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.UI\bin\PagedList.Mvc.xml
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.UI\bin\System.Web.Razor.xml
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.UI\bin\System.Web.Webpages.xml
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.UI\bin\System.Web.Webpages.Deployment.xml
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.UI\bin\System.Web.Webpages.Razor.xml
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.UI\bin\System.Web.Helpers.xml
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.UI\bin\System.Web.Mvc.xml
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.UI\bin\Bibliothek.MAP.pdb
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.UI\bin\Bibliothek.MAP.dll.config
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.UI\obj\Debug\Bibliothek.UI.csprojResolveAssemblyReference.cache
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.UI\obj\Debug\Bibliothek.UI.csproj.CoreCompileInputs.cache
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.UI\obj\Debug\Bibliothek.UI.dll
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.UI\obj\Debug\Bibliothek.UI.pdb

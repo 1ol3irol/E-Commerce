@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "SliderList";
+    Layout = "~/Areas/Admin/Views/Shared/_SharedAdminLayout.cshtml";
+}
+
+@model List<Bibliothek.Model.Entity.Slider>
+
+<div class="container-fluid">
+    <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/Admin/Home/Index">Ana Sayfa</a></li>
+        <li class="breadcrumb-item">Slider</li>
+        <li class="breadcrumb-item">Slider Listele</li>
+        <li class="breadcrumb-item"><a href="/Admin/CMS/SliderAdd">Slider Ekle</a></li>
+    </ul>
+    <hr>
+    <div class=" container col-md-12" style="margin-top:20px;">
+        <br />
+        <table class="table table-bordered table-striped">
+            <thead style="background-color:deepskyblue;color:white">
+                <tr>
+                    <th>Fotoğraf</th>
+                    <th>Sıra</th>
+                    <th colspan="2">Güncelle / Sil</th>
+                </tr>
+            </thead>
+            <tbody id="myTable">
+                @foreach (var item in Model.OrderBy(x=>x.Queue))
+                {
+                    <tr>
+                        <td class="text-center">
+                            <img src="@item.SliderPath" style="display:block" width="100" height="100" class="text-center" />
+                        </td>
+                        <td>@item.Queue</td>
+                        <td>
+                            <a href="/Admin/CMS/SliderUpdate/@item.ID"><i class="fa fa-edit fa-2x" style="margin-left:20px;margin-top:18px;"></i></a>
+
+                            <a href="/Admin/CMS/SliderDelete/@item.ID"><i class="fa fa-trash-o fa-2x" style="margin-left:30px;"></i></a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

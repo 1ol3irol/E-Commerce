@@ -1,0 +1,11 @@
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.Utility\bin\Debug\Bibliothek.Utility.dll
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.Utility\bin\Debug\Bibliothek.Utility.pdb
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.Utility\obj\Debug\Bibliothek.Utility.csprojResolveAssemblyReference.cache
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.Utility\obj\Debug\Bibliothek.Utility.csproj.CoreCompileInputs.cache
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.Utility\obj\Debug\Bibliothek.Utility.dll
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.Utility\obj\Debug\Bibliothek.Utility.pdb
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.Utility\bin\Debug\Bibliothek.Utility.dll
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.Utility\bin\Debug\Bibliothek.Utility.pdb
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.Utility\obj\Debug\Bibliothek.Utility.csproj.CoreCompileInputs.cache
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.Utility\obj\Debug\Bibliothek.Utility.dll
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.Utility\obj\Debug\Bibliothek.Utility.pdb

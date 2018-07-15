@@ -1,0 +1,31 @@
+﻿@model Bibliothek.UI.Areas.Admin.Models.DTO.SliderDTO
+
+@{
+    ViewBag.Title = "SliderUpdate";
+    Layout = "~/Areas/Admin/Views/Shared/_SharedAdminLayout.cshtml";
+}
+
+<div class="container-fluid">
+    <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/Admin/Home/Index">Ana Sayfa</a></li>
+        <li class="breadcrumb-item"><a href="/Admin/CMS/SliderList">Slider</a></li>
+        <li class="breadcrumb-item">Slider Güncelle</li>
+    </ul>
+    <hr>
+    <form action="/Admin/CMS/SliderUpdate" method="post" class="col-md-6 col-md-offset-3" style="margin-top:50px;">
+        <div class="form-group">
+            <label for="Queue">Slider Sırası</label>
+            <input type="number" name="Queue" value="@Model.Queue" class="form-control" />
+        </div>
+        <input type="text" style="visibility:hidden" name="ID" value="@Model.ID" />
+        @if (int.Parse(Model.Queue) > 0 || Model.Queue != null)
+        {
+            <input type="submit" name="name" value="Güncelle" class="form-control btn btn-primary" />
+        }
+        else
+        {
+            <input type="button" name="name" value="Güncelle" class="form-control btn btn-primary" />            
+        }
+    </form>
+</div>
+

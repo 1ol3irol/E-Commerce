@@ -1,0 +1,11 @@
+﻿@model List<Bibliothek.Model.Entity.Category>
+
+<div class="col-lg-3" id="CategoryList">
+    <h1 class="my-4">Kategoriler</h1>
+    <div class="list-group">
+        @foreach (var item in Model)
+        {
+            @Html.ActionLink(item.Name, "Index", "Product", new { id = item.ID }, new { @class = "list-group-item" })
+        }
+    </div>
+</div>

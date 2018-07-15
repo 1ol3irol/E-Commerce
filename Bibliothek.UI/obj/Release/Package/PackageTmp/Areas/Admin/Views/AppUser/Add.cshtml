@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Areas/Admin/Views/Shared/_SharedAdminLayout.cshtml";
+}
+
+<div class="container-fluid">
+    <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/Admin/Home/Index">Ana Sayfa</a></li>
+        <li class="breadcrumb-item"><a href="/Admin/AppUser/List">Kullanıcılar</a></li>
+        <li class="breadcrumb-item">Kullanıcı Ekle</li>
+    </ul>
+    <hr>
+    <div class="col-md-4">
+        <form action="/Admin/AppUser/Add" method="post" style="margin-top:20px">
+
+            <div class="form-group">
+                <label for="Name">Adı</label>
+                <input type="text" name="Name" value="" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="LastName">Soyadı</label>
+                <input type="text" name="LastName" value="" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="UserName">Kullanıcı Adı</label>
+                <input type="text" name="UserName" value="" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="Password">Kullanıcı Şifresi</label>
+                <input type="text" name="Password" value="" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="Role">Kullanıcı Rolü</label>
+                <select name="Role" class="form-control">
+                    @foreach (var item in Enum.GetNames(typeof(Bibliothek.Model.Entity.Role)))
+                    {
+                        <option value="@item">@item</option>
+                    }
+                </select>
+            </div>
+
+            <input type="submit" name="name" class="btn btn-success pull-right" value="Kullanıcı Ekle" style="margin-bottom:20px;" />
+
+        </form>
+    </div>
+</div>
+

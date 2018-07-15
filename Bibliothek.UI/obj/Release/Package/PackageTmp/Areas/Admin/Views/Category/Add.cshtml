@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Areas/Admin/Views/Shared/_SharedAdminLayout.cshtml";
+}
+
+<div class="container-fluid">
+    <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/Admin/Home/Index">Ana Sayfa</a></li>
+        <li class="breadcrumb-item"><a href="/Admin/Category/List">Kategoriler</a></li>
+        <li class="breadcrumb-item">Kategori Ekle</li>
+    </ul>
+    <hr>
+    <div class="col-md-4">
+        <form action="/Admin/Category/Add" method="post" style="margin-top:20px;">
+            <div class="form-group">
+                <label for="Name">Kategori İsmi</label>
+                <input type="text" name="Name" value="" class="form-control" />
+            </div>
+            <input type="submit" name="name" value="Kategori Ekle" class="btn btn-success pull-right" />
+        </form>
+    </div>
+</div>
+

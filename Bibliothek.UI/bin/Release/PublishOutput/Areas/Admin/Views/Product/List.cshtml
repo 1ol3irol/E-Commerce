@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Areas/Admin/Views/Shared/_SharedAdminLayout.cshtml";
+}
+
+@model List<Bibliothek.Model.Entity.Product>
+
+<div class="container-fluid">
+    <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/Admin/Home/Index">Ana Sayfa</a></li>
+        <li class="breadcrumb-item">Ürünler</li>
+        <li class="breadcrumb-item">Ürünleri Listele</li>
+        <li class="breadcrumb-item"><a href="/Admin/Product/Add">Ürün Ekle</a></li>
+    </ul>
+    <hr>
+    <div class=" container col-md-12" style="margin-top:20px;">
+        <h3>Aradığınız Ürünü Yazınız..</h3>
+        <input class="form-control" id="myInput" type="text" placeholder="Ara..">
+        <br />
+        <table class="table table-bordered table-striped">
+            <thead style="background-color:deepskyblue;color:white">
+                <tr>
+                    <th>Ürün Adı</th>
+                    <th>Fiyatı</th>
+                    <th>Stok Miktarı</th>
+                    <th>Kategori Adı</th>
+                    <th>Fotoğraf</th>
+                    <th colspan="2">Güncelle / Sil</th>
+                </tr>
+            </thead>
+            <tbody id="myTable">
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Name</td>
+                        <td>@item.Price</td>
+                        <td class="text-center">@item.UnitsInStock</td>
+                        <td class="text-center">@item.Category.Name</td>
+                        <td class="text-center">
+                            <img src="@item.ImagePath" style="display:block" width="41" height="60" class="text-center" />
+                        </td>
+                        <td>
+                            <a href="/Admin/Product/Update/@item.ID"><i class="fa fa-edit fa-2x" style="margin-left:20px;margin-top:18px;"></i></a>
+
+                            <a href="/Admin/Product/Delete/@item.ID"><i class="fa fa-trash-o fa-2x" style="margin-left:30px;"></i></a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#myInput").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+</script>
+

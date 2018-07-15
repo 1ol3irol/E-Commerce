@@ -1,0 +1,93 @@
+﻿
+
+@model Bibliothek.UI.Areas.Admin.Models.VM.LoginVM
+
+<style type="text/css">
+    .validation-summary-errors {
+        background-color: red;
+        color: white;
+        border-radius: 8px;
+        padding: 10px;
+    }
+</style>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kullanıcı Giriş Sayfası</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="~/Content/Css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/Css/util.css" rel="stylesheet" />
+    <link href="~/Content/Css/main.css" rel="stylesheet" />
+
+    <script src="~/Content/Scripts/jquery.min.js"></script>
+    <script src="~/Content/Scripts/bootstrap.bundle.min.js"></script>
+    <script src="~/Content/Scripts/jquery.easing.min.js"></script>
+    <script src="~/Content/Scripts/main.js"></script>
+
+</head>
+<body>
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <div class="login100-form-title" style="background-image: url(/Content/Images/Admin/login.jpg);">
+                    <span class="login100-form-title-1">
+                        HOŞGELDİNİZ
+                    </span>
+                </div>
+
+                <form class="login100-form validate-form" action="/Admin/Account/Login" method="post">
+
+                    @Html.ValidationSummary(false)
+
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <div class="wrap-input100" style="margin-top:20px;">
+                            <i class="fa fa-user-circle-o"></i>
+                            @Html.TextBoxFor(x => x.Username, new { @placeholder="Kullanıcı Adını Giriniz",@class="input100", @type = "text", @name ="Username",@Value=ViewBag.Username })
+                            <span class="focus-input100"></span>
+                        </div>
+
+                        <div class="wrap-input100" style="margin-top:20px;">
+                            <i class="fa fa-key" aria-hidden="true"></i>
+                            @Html.TextBoxFor(x => x.Password, new { @placeholder = "Şifre Giriniz", @class = "input100", @type = "password", @name = "Password", @Value = ViewBag.Password })
+                            <span class="focus-input100"></span>
+                        </div>
+                        <br />
+                        <div class="flex-sb-m w-full p-b-30" style="margin-top:20px; ">
+
+                        </div>
+                        <div class="container-login100-form-btn">
+
+                            <button class="login100-form-btn">Giriş</button>
+                            <div style="margin-top:12px;">
+                                <a style="margin-left:50px;" href="" data-toggle="modal" data-target="#forgotPassword">
+                                    Şifremi Unuttum <i class="fa fa-frown-o" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    }
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="forgotPassword" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Lütfen sistem yöneticisine başvurunuz !</h4>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Kapat</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+﻿
+@{
+    ViewBag.Title = "Update";
+    Layout = "~/Areas/Admin/Views/Shared/_SharedAdminLayout.cshtml";
+}
+
+@model Bibliothek.UI.Areas.Admin.Models.VM.ProductUpdateVM
+<div class="container-fluid">
+    <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/Admin/Home/Index">Ana Sayfa</a></li>
+        <li class="breadcrumb-item"><a href="/Admin/Product/List">Ürünler</a></li>
+        <li class="breadcrumb-item">Ürünleri Güncelle</li>
+    </ul>
+    <hr>
+    <form action="/Admin/Product/Update" method="post" enctype="multipart/form-data" class="col-md-3" style="margin-top:20px;">
+        <div class="form-group">
+            <label for="Name">Ürün Adı</label>
+            <input type="text" name="Name" value="@Model.Product.Name" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="Price">Ürün Fiyatı</label>
+            <input type="text" name="Price" value="@Model.Product.Price" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="UnitsInStock">Stok Miktarı</label>
+            <input type="text" name="UnitsInStock" value="@Model.Product.UnitsInStock" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="Quantity">Birimi</label>
+            <input type="text" name="Quantity" value="@Model.Product.Quantity" class="form-control" />
+        </div>
+        <div class="form-group" id="Star">
+            <label for="Star">Oyuncu</label>
+            <input type="text" name="Star" value="@Model.Product.Star" class="form-control" />
+        </div>
+        <div class="form-group" id="Director">
+            <label for="Director">Yönetmen</label>
+            <input type="text" name="Director" value="@Model.Product.Director" class="form-control" />
+        </div>
+        <div class="form-group" id="Author">
+            <label for="Author">Yazar</label>
+            <input type="text" name="Author" value="@Model.Product.Author" class="form-control" />
+        </div>
+        <div class="form-group" id="Artist">
+            <label for="Artist">Sanatçı</label>
+            <input type="text" name="Artist" value="@Model.Product.Artist" class="form-control" />
+        </div>
+        <div class="form-group" id="TradeMark">
+            <label for="TradeMark">Marka</label>
+            <input type="text" name="TradeMark" value="@Model.Product.TradeMark" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="Description">Açıklama</label>
+            <textarea type="text" name="Description" value="@Model.Product.Description" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="CategoryID">Kategori Seçiniz</label>
+            <select name="CategoryID" id="selector"  class="form-control">
+                <option>Lütfen Seçiniz</option>
+                @foreach (var item in Model.Categories)
+                {
+                    <option value="@item.ID">@item.Name</option>
+                }
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="Image">Fotoğraf</label>
+            <input type="file" name="Image" value="@Model.Product.ImagePath" class="form-control" />
+        </div>
+        <input type="text" style="visibility:hidden" name="ID" value="@Model.Product.ID" />
+        <input type="submit" name="name" value="Ürünü Güncelle" class="btn btn-primary pull-right" style="margin-bottom:20px;" />
+    </form>
+</div>
+
+<script>
+    $(document).ready(function () {
+
+        $("#selector").change(function () {
+            var conceptName = $('#selector').find(":selected").text()
+
+            switch (conceptName) {
+                case "Kitap":
+                    $("#Star").hide();
+                    $("#Director").hide();
+                    $("#Artist").hide();
+                    $("#TradeMark").hide();
+                    $("#Author").show();
+                    break;
+
+                case "Film":
+                    $("#Star").show();
+                    $("#Director").show();
+                    $("#Artist").hide();
+                    $("#TradeMark").hide();
+                    $("#Author").hide();
+                    break;
+
+                case "Müzik":
+                    $("#Star").hide();
+                    $("#Director").hide();
+                    $("#Artist").show();
+                    $("#TradeMark").hide();
+                    $("#Author").hide();
+                    break;
+
+                case "Hobi & Oyuncak":
+                    $("#Star").hide();
+                    $("#Director").hide();
+                    $("#Artist").hide();
+                    $("#TradeMark").show();
+                    $("#Author").hide();
+                    break;
+
+                default:
+                    $(".form-group").show();
+                    break;
+            }
+        })
+    })
+</script>
+

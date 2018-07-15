@@ -1,0 +1,13 @@
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.Model\bin\Release\Bibliothek.Model.dll
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.Model\bin\Release\Bibliothek.Model.pdb
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.Model\bin\Release\Bibliothek.Core.dll
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.Model\bin\Release\EntityFramework.dll
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.Model\bin\Release\Bibliothek.Utility.dll
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.Model\bin\Release\Bibliothek.Core.pdb
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.Model\bin\Release\Bibliothek.Core.dll.config
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.Model\bin\Release\EntityFramework.xml
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.Model\bin\Release\Bibliothek.Utility.pdb
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.Model\obj\Release\Bibliothek.Model.csprojResolveAssemblyReference.cache
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.Model\obj\Release\Bibliothek.Model.csproj.CoreCompileInputs.cache
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.Model\obj\Release\Bibliothek.Model.dll
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.Model\obj\Release\Bibliothek.Model.pdb

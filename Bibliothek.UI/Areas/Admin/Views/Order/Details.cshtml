@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_SharedAdminLayout.cshtml";
+}
+
+@model List<Bibliothek.Model.Entity.OrderDetail>
+@{
+    decimal toplamTutar = 0;
+    decimal kargoTutari = 10;
+}
+<div class="col-md-12">
+    <span class="font-weight-bold">Sipariş Kodu: @Model[0].Order.ID</span>&nbsp;
+    <br />
+    <table class="table table-hover" style="margin-top:20px;">
+        <thead>
+            <tr>
+                <th>Ürün Fotoğraf</th>
+                <th>Ürün Adı</th>
+                <th>Ürün Birim Fiyatı</th>
+                <th>Ürün Miktarı</th>
+                <th>Adres</th>
+                <th>Telefon</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td><img src="@item.Product.ImagePath" style="display:block;" width="30" height="30" /></td>
+                    <td>@item.Product.Name</td>
+                    <td>@item.Price ₺</td>
+                    <td>@item.Quantity</td>
+                    <td>@item.Address</td>
+                    <td>@item.Phone</td>
+                </tr>
+                toplamTutar += (decimal)(item.Quantity * item.Price);
+            }
+        </tbody>
+    </table>
+    @if (toplamTutar >= 100)
+    {
+        <span>Kargo Bedeli: @(kargoTutari*0) ₺</span>
+        <br />
+        <span>Sipariş Toplam Tutarı: @toplamTutar ₺</span>
+    }
+    else
+    {
+        <span>Kargo Bedeli: 10,00 ₺</span>
+        <br />
+        <span>Sipariş Toplam Tutarı: @(toplamTutar+kargoTutari) ₺</span>
+    }
+
+    <br /><br />
+    <a href="/Admin/order/confirmOrder/@Model[0].Order.ID">Onayla <i class="fa fa-check"></i></a>
+    /
+    <a href="/Admin/order/RejectOrder/@Model[0].Order.ID" style="color:red">Reddet <i class="fa fa-ban"></i></a>
+</div>
+

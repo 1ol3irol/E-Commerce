@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "SliderAdd";
+    Layout = "~/Areas/Admin/Views/Shared/_SharedAdminLayout.cshtml";
+}
+
+<div class="container-fluid">
+    <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/Admin/Home/Index">Ana Sayfa</a></li>
+        <li class="breadcrumb-item">İçerik Yönetimi</li>
+        <li class="breadcrumb-item">Slider</li>
+    </ul>
+    <hr />
+    <div class="col-md-3">
+        <form action="/Admin/CMS/SliderAdd" method="post" enctype="multipart/form-data" style="margin-top:20px;">
+            <div class="form-group">
+                <label for="Image">Fotoğraf</label>
+                <input type="file" name="Image" value="" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="Queue">Sıra</label>
+                <input type="number" name="Queue" value="" class="form-control" />
+            </div>
+            <input type="submit" name="name" value="Ürün Ekle" class="btn btn-success pull-right" style="margin-bottom:20px;" />            
+            <br />
+        </form>
+    </div>
+</div>
+

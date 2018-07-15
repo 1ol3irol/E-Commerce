@@ -1,0 +1,36 @@
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.MAP\bin\Debug\Bibliothek.MAP.dll.config
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.MAP\bin\Debug\Bibliothek.MAP.dll
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.MAP\bin\Debug\Bibliothek.MAP.pdb
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.MAP\bin\Debug\Bibliothek.Core.dll
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.MAP\bin\Debug\Bibliothek.Model.dll
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.MAP\bin\Debug\EntityFramework.dll
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.MAP\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.MAP\bin\Debug\Bibliothek.Utility.dll
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.MAP\bin\Debug\Bibliothek.Core.pdb
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.MAP\bin\Debug\Bibliothek.Core.dll.config
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.MAP\bin\Debug\Bibliothek.Model.pdb
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.MAP\bin\Debug\EntityFramework.xml
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.MAP\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.MAP\bin\Debug\Bibliothek.Utility.pdb
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.MAP\obj\Debug\Bibliothek.MAP.csprojResolveAssemblyReference.cache
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.MAP\obj\Debug\Bibliothek.MAP.csproj.CoreCompileInputs.cache
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.MAP\obj\Debug\Bibliothek.MAP.dll
+C:\Users\bgokk\source\repos\Bibliothek\Bibliothek.MAP\obj\Debug\Bibliothek.MAP.pdb
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.MAP\bin\Debug\Bibliothek.MAP.dll.config
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.MAP\bin\Debug\Bibliothek.MAP.dll
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.MAP\bin\Debug\Bibliothek.MAP.pdb
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.MAP\bin\Debug\Bibliothek.Core.dll
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.MAP\bin\Debug\Bibliothek.Model.dll
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.MAP\bin\Debug\EntityFramework.dll
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.MAP\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.MAP\bin\Debug\Bibliothek.Utility.dll
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.MAP\bin\Debug\Bibliothek.Core.pdb
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.MAP\bin\Debug\Bibliothek.Core.dll.config
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.MAP\bin\Debug\Bibliothek.Model.pdb
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.MAP\bin\Debug\EntityFramework.xml
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.MAP\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.MAP\bin\Debug\Bibliothek.Utility.pdb
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.MAP\obj\Debug\Bibliothek.MAP.csprojResolveAssemblyReference.cache
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.MAP\obj\Debug\Bibliothek.MAP.csproj.CoreCompileInputs.cache
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.MAP\obj\Debug\Bibliothek.MAP.dll
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.MAP\obj\Debug\Bibliothek.MAP.pdb

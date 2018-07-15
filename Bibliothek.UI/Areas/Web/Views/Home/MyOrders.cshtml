@@ -1,0 +1,52 @@
+﻿@using Bibliothek.Model.Entity
+
+
+@{
+    ViewBag.Title = "MyOrders";
+    Layout = "~/Areas/Web/Views/Shared/_SharedWebLayout.cshtml";
+}
+
+@{
+    Customer customer = null;
+    if (Session["login"] != null)
+    {
+        customer = Session["login"] as Customer;
+    }
+}
+
+
+@model List<Bibliothek.Model.Entity.Order>
+
+<div class="col-md-12" style="margin-top:20px;">
+    <h3>Tüm Siparişlerim</h3>
+    <br />
+    <table class="table table-bordered table-striped">
+        <thead style="background-color:deepskyblue;color:white">
+            <tr>
+                <th>Sipariş Numarası</th>
+                <th>Sipariş Tarihi</th>
+                <th>Onay Tarihi</th>
+                <th>Onay Durumu</th>
+                <th colspan="2">Sipariş Detay</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Where(x=>x.CustomerID==customer.ID))
+            {
+                <tr>
+                    <td>@item.ID</td>
+                    <td>@item.CreatedDate</td>
+                    <td>@item.ModifiedDate</td>
+                    <td>@item.Confirmed</td>
+                    <td>
+                        <a href="/Web/Home/MyOrderDetails/@item.ID">Detay</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
+
+

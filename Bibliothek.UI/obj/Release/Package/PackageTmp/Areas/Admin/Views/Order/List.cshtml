@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Areas/Admin/Views/Shared/_SharedAdminLayout.cshtml";
+}
+
+@using PagedList;
+@using PagedList.Mvc
+<link href="~/Content/Css/PagedList.css" rel="stylesheet" />
+@model IPagedList<Bibliothek.Model.Entity.Order>
+
+<div class="container-fluid">
+    <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/Admin/Home/Index">Ana Sayfa</a></li>
+        <li class="breadcrumb-item">Siparişler</li>
+        <li class="breadcrumb-item">Siparişleri Listele</li>
+    </ul>
+    <hr>
+    <div class="col-md-12" style="margin-top:20px;">
+        <table class="table table-bordered table-striped">
+            <thead style="background-color:deepskyblue;color:white">
+                <tr>
+                    <th>Sipariş Kodu</th>
+                    <th>Müşteri Adı Soyadı</th>
+                    <th>Sipariş Tarihi</th>
+                    <th colspan="2">Sipariş Detay</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+            {
+                    <tr>
+                        <td>@item.ID</td>
+                        <td>@item.Customer.Name @item.Customer.LastName</td>
+                        <td>@item.CreatedDate</td>
+                        <td>
+                            <a href="/Admin/Order/Details/@item.ID">Detay</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <div class="pagedList">
+            @Html.PagedListPager(Model, page => Url.Action("List", "Order", new { page }), PagedListRenderOptions.Classic)
+        </div>
+    </div>
+</div>
+

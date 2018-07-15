@@ -1,0 +1,130 @@
+﻿@using Bibliothek.Model.Entity
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Oku, İzle, Dinle, Eğlen</title>
+
+    <link href="~/Content/Css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Css/shop-homepage.css" rel="stylesheet" />
+    <link href="~/Content/Css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/Css/sb-admin.min.css" rel="stylesheet" />
+
+    <script src="~/Content/Scripts/jquery.min.js"></script>
+    <script src="~/Content/Scripts/bootstrap.bundle.min.js"></script>
+    <script src="~/Content/Scripts/jquery.easing.min.js"></script>
+    <script src="~/Content/Scripts/sb-admin.min.js"></script>
+
+</head>
+<body id="page-top">
+    @{
+        Customer customer = null;
+        if (Session["login"] != null)
+        {
+            customer = Session["login"] as Customer;
+        }
+    }
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <img class="navbar-brand" src="~/Content/Images/Web/Home/logo_40x40.jpg" />
+            <a class="navbar-brand" href="/Web/Home/Index">Birol Kitabevi  <i class="fa fa-book" aria-hidden="true"></i></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    @if (customer == null)
+                    {
+                        <li class="nav-item" id="login">
+                            <a class="nav-link" href="/Web/Home/Login"><i class="fa fa-sign-in" aria-hidden="true"></i> Üye Girişi</a>
+                        </li>
+                        <li class="nav-item" id="register">
+                            <a class="nav-link" href="/Web/Home/Register"><i class="fa fa-user-plus"></i> Üye Ol</a>
+                        </li>
+                    }
+
+                    @if (customer != null)
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Web/User/Update/@customer.ID"><i class="fa fa-user" aria-hidden="true"></i> Merhaba @customer.Name @customer.LastName</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="cart_anchor" href="/Web/Home/MyOrders"><i class="fa fa-shopping-bag" aria-hidden="true"></i> Siparişlerim</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="cart_anchor" href="/Web/Cart/Index"><i class="fa fa-shopping-basket" aria-hidden="true"></i> Sepetim</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Web/Home/Index" data-toggle="modal" data-target="#Logout"><i class="fa fa-sign-out" aria-hidden="true"></i> Çıkış</a>
+                        </li>
+                    }
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row col-lg-12">
+            @Html.Action("Category", "Home")
+            <div class="col-lg-9">
+                @RenderBody()
+
+            </div>
+        </div>
+    </div>
+
+    @*@RenderSection("footer",required:false)*@
+
+    @*@Html.Action("Footer","Home")*@
+
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fa fa-angle-up"></i>
+    </a>
+
+    <div class="modal fade" id="Logout" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Çıkmak İstediğinize Emin Misiniz?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Oturumu sonlandırmak için "Çıkış" butonunu tıklayınız.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">İptal</button>
+                    <a class="btn btn-primary" href="/Web/Home/Logout">Çıkış</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<div class="modal fade" id="SendEMail" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">E-Posta Adresiniz Kaydedilmiştir.</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Kapat</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+

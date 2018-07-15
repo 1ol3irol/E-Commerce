@@ -1,0 +1,161 @@
+﻿@using Bibliothek.Model.Entity
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Birol Gökkaya</title>
+
+    <link href="~/Content/Css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/Css/sb-admin.min.css" rel="stylesheet" />
+
+    <script src="~/Content/Scripts/jquery.min.js"></script>
+    <script src="~/Content/Scripts/jquery.js"></script>
+    <script src="~/Content/Scripts/bootstrap.bundle.min.js"></script>
+    <script src="~/Content/Scripts/jquery.easing.min.js"></script>
+    <script src="~/Content/Scripts/sb-admin.min.js"></script>
+
+</head>
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+        <a class="navbar-brand" href="/Admin/Home/Index">Yönetim Paneli</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+
+            <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Ana Menüye Dönün">
+                    <a class="nav-link" href="/Admin/Home/Index">
+                        <i class="fa fa-fw fa-dashboard"></i>
+                        <span class="nav-link-text">Menü</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Kullanıcı ve Sipariş Menüsü">
+                    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti" data-parent="#exampleAccordion">
+                        <i class="fa fa-fw fa-wrench"></i>
+                        <span class="nav-link-text">Yönetim</span>
+                    </a>
+                    <ul class="sidenav-second-level collapse" id="collapseMulti">
+                        <li>
+                            <a class="nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti2"><i class="fa fa-user" aria-hidden="true"></i> Kullanıcılar</a>
+                            <ul class="sidenav-third-level collapse" id="collapseMulti2">
+                                <li>
+                                    <a href="/Admin/AppUser/List"><i class="fa fa-list-ul" aria-hidden="true"></i> Kullanıcıları Listele</a>
+                                </li>
+                                <li>
+                                    <a href="/Admin/AppUser/Add"><i class="fa fa-plus" aria-hidden="true"></i> Kullanıcı Ekle</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti3"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Siparişler</a>
+                            <ul class="sidenav-third-level collapse" id="collapseMulti3">
+                                <li>
+                                    <a href="/Admin/Order/List"><i class="fa fa-list-ul" aria-hidden="true"></i> Siparişleri Listele</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti4"><i class="fa fa-list-ul" aria-hidden="true"></i> İçerik Yönetimi</a>
+                            <ul class="sidenav-third-level collapse" id="collapseMulti4">
+                                <li>
+                                    <a href="/Admin/CMS/SliderList"><i class="fa fa-film" aria-hidden="true"></i> Slider</a>
+                                </li>
+                                <li>
+                                    <a href="/Admin/Menu/List"><i class="fa fa-bars" aria-hidden="true"></i> Menü Yönetimi</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Kategori Menüsü">
+                    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
+                        <i class="fa fa-fw fa-sitemap"></i>
+                        <span class="nav-link-text">Kategoriler</span>
+                    </a>
+                    <ul class="sidenav-second-level collapse" id="collapseExamplePages">
+                        <li>
+                            <a href="/Admin/Category/List"><i class="fa fa-list-ul" aria-hidden="true"></i> Kategorileri Listele</a>
+                        </li>
+                        <li>
+                            <a href="/Admin/Category/Add"><i class="fa fa-plus" aria-hidden="true"></i> Kategori Ekle</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Ürünler Menüsü">
+                    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
+                        <i class="fa fa-product-hunt"></i>
+                        <span class="nav-link-text">Ürünler</span>
+                    </a>
+                    <ul class="sidenav-second-level collapse" id="collapseComponents">
+                        <li>
+                            <a href="/Admin/Product/List"><i class="fa fa-list-ul" aria-hidden="true"></i> Ürünleri Listele</a>
+                        </li>
+                        <li>
+                            <a href="/Admin/Product/Add"><i class="fa fa-plus" aria-hidden="true"></i> Ürün Ekle</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="modal" data-target="#Logout">
+                        <i class="fa fa-fw fa-sign-out"></i>Çıkış
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="content-wrapper">
+
+        @RenderBody()
+   
+        <footer class="sticky-footer">
+            <div class="container">
+                <div class="text-center">
+                    <small>Copyright © Birol Gökkaya @DateTime.Now.Year</small>
+                </div>
+            </div>
+        </footer>
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fa fa-angle-up"></i>
+        </a>
+        <!-- Logout Modal-->
+        <div class="modal fade" id="Logout" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Çıkmak İstediğinize Emin Misiniz?</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">Oturumu sonlandırmak için "Çıkış" butonunu tıklayınız.</div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">İptal</button>
+                        <a class="btn btn-primary" href="/Account/Logout">Çıkış</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+

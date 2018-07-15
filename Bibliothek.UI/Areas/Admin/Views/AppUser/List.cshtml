@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Areas/Admin/Views/Shared/_SharedAdminLayout.cshtml";
+}
+
+@model List<Bibliothek.Model.Entity.AppUser>
+
+<div class="container-fluid">
+    <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/Admin/Home/Index">Ana Sayfa</a></li>
+        <li class="breadcrumb-item">Kullanıcılar</li>
+        <li class="breadcrumb-item">Kullanıcıları Listele</li>
+    </ul>
+    <hr>
+
+    <div class="col-md-12" style="margin-top:20px;">
+        <table class="table table-bordered table-striped">
+            <thead style="background-color:deepskyblue;color:white">
+                <tr>
+                    <th>Ad</th>
+                    <th>Soyad</th>
+                    <th>Kullanıcı Adı</th>
+                    <th>Şifre</th>
+                    <th>Rol</th>
+                    <th>Durum</th>
+                    <th colspan="2">Güncelle  /  Sil</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Name</td>
+                        <td>@item.LastName</td>
+                        <td>@item.Username</td>
+                        <td>@item.Password</td>
+                        <td>@item.Role</td>
+                        <td>@item.Status</td>
+                        <td>
+                            <a href="/Admin/AppUser/Update/@item.ID"><i class="fa fa-edit fa-2x" style="margin-left:20px;"></i></a>
+
+                            <a href="/Admin/AppUser/Delete/@item.ID"><i class="fa fa-trash-o fa-2x" style="margin-left:30px;"></i></a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

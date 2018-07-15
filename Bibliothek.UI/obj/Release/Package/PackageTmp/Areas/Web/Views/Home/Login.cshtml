@@ -1,0 +1,46 @@
+﻿@model Bibliothek.UI.Areas.Web.Models.VM.LoginVM
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Areas/Web/Views/Shared/_SharedWebLayout.cshtml";
+}
+
+<script>
+    $(document).ready(function () {
+        $("#CategoryList").toggle();
+    });
+</script>
+
+<link href="~/Content/Css/login-register.css" rel="stylesheet" />
+@using (Html.BeginForm())
+{
+    <br /><br />
+
+    <div class="row">
+        <div class="col-lg-12 offset-2">
+            <div class="form-header">
+                <h1 class="text-center ">Giriş Formu  </h1>
+            </div>
+            <div class="main-content">
+
+                @Html.ValidationSummary(false)
+
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                    @Html.TextBoxFor(model => model.Email, new { @class = "form-control", placeholder = "Mail Adresiniz" })
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-lock" aria-hidden="true"></i></span>
+                    @Html.TextBoxFor(model => model.Password, new { @class = "form-control", placeholder = "Şifreniz", type = "password" })
+                </div>
+                <div class="form-group ">
+                    <button href="#" type="submit" class="btn btn-danger btn-lg btn-block login-button">Giriş</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
+
+
+

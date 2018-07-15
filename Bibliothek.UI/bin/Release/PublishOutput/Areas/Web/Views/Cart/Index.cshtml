@@ -1,0 +1,149 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Web/Views/Shared/_SharedWebLayout.cshtml";
+}
+
+
+
+@using Bibliothek.UI.Areas.Web.Models
+@model List<Bibliothek.UI.Areas.Web.Models.VM.ProductVM>
+@{
+    ProductCart cart = null;
+    if (Session["sepet"] != null)
+    {
+        cart = Session["sepet"] as ProductCart;
+    }
+}
+<div class="row" style="margin-top:20px;">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="col-lg-12">
+                <h3>Sipariş Özeti</h3>
+                <br />
+                <table class="table table-bordered table-striped">
+                    <thead style="background-color:deepskyblue;color:white">
+                        <tr>
+                            <th>Ürün Adı</th>
+                            <th>Fiyat</th>
+                            <th>Stok Miktarı</th>
+                            <th>Adet</th>
+                            <th>Toplam Fiyat</th>
+                            <th>İşlem</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+        <ul id="data"></ul>
+    </div>
+
+</div>
+<hr />
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="col-lg-6 col-lg-offset-6">
+            <label>Kargo Bedeli: <span id="shippingCount"></span> ₺</label>
+            <label>Ödemeniz Gereken Toplam Tutar: <span id="totalCount"></span> ₺</label>
+            <br />
+
+            @if (cart != null)
+            {
+                <a id="checkout" class="btn btn-primary" style="margin-bottom:50px;" href="~/Web/Checkout/Add">Sipariş Ver</a>
+            }
+        </div>
+    </div>
+</div>
+
+<script src="~/Content/Scripts/jquery.min.js"></script>
+<script src="~/Content/Scripts/accounting.min.js"></script>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        setTimeout(function () {
+            $.Cart.List()
+        },200)
+
+        $.Cart = {
+            List: function () {
+                $.getJSON("http://localhost:50779/Web/Cart/List", function (data) {
+                    $("table tbody tr").remove();
+                    var count = Object.keys(data).length;
+                    var totalCount = 0;
+                    var shippingCount = 10;
+                    if (count > 0) {
+                        $.each(data, function (key, item) {
+                            $("table tbody").append(`<tr><td style='line-height:40px;'>
+                                ${item.Name}</td><td style='line-height:40px;'>` + accounting.formatMoney(`
+                                ${item.Price}`) + ` ₺ </td>` +`<td style='line-height:40px;'>
+                                ${item.UnitsInStock} </td><td style='line-height:40px;'>
+                                ${item.Quantity} </td><td style='line-height:40px;'>` + accounting.formatMoney(`
+                                ${item.Quantity * item.Price}`) + ` ₺</td> ` + `<td><button onclick='$.Cart.Increase(" ${item.ID} ")' data-toggle='tooltip' data-placement='right' class='btn btn-primary fa fa-plus-circle'></button><button onclick='$.Cart.Decrease(" ${item.ID} ")' data-toggle='tooltip' data-placement='right' class='btn btn-warning fa fa-minus-circle'></button><button onclick='$.Cart.Remove(" ${item.ID} ")' data-toggle='tooltip' data-placement='right' class='btn btn-danger fa fa-trash'></button></td></tr>`)
+                            
+                            totalCount += (item.Quantity * item.Price);
+                        });
+                    }
+                    if (totalCount >= 100 || totalCount == 0) {
+                        $("#shippingCount").html(accounting.formatMoney(shippingCount * 0));
+                        $("#totalCount").html(accounting.formatMoney(totalCount + shippingCount * 0));
+                    }
+                    else {
+                        $("#shippingCount").html(accounting.formatMoney(shippingCount));
+                        $("#totalCount").html(accounting.formatMoney(totalCount + shippingCount));                        
+                    }
+                    if (count < 1) {
+                        $("#checkout").remove();
+                    }
+                });
+            },
+
+            Increase: function (ID) {
+                $.ajax({
+                    type: "POST",
+                    dataType: "Json",
+                    url: "@Url.Action("IncreaseCart", "Cart")/" + ID,
+                    success: function (data) {
+                        $.Cart.List();
+                    }
+                })
+            },
+            Decrease: function (ID) {
+                $.ajax({
+                    type: "POST",
+                    dataType: "Json",
+                    url: "@Url.Action("DecreaseCart","Cart")/" + ID,
+                    success: function (data) {
+                        $.Cart.List();
+                    }
+                })
+            },
+            Remove: function (ID) {
+                $.ajax({
+                    type: "POST",
+                    dataType: "Json",
+                    url: "@Url.Action("RemoveCart","Cart")/" + ID,
+                    success: function (data) {
+                        $.Cart.List();
+                    }
+                })
+            },
+        }
+    });
+
+</script>
+
+<style type="text/css">
+    img:hover {
+        cursor: pointer !important;
+    }
+</style>
+
+<script type="text/javascript">
+    accounting.format.number(number, [precision = 2], [thousand = "."], [decimal = ","])
+</script>
+
+
+

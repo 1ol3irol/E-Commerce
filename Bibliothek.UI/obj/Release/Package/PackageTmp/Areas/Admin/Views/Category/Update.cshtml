@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Update";
+    Layout = "~/Areas/Admin/Views/Shared/_SharedAdminLayout.cshtml";
+}
+
+@model Bibliothek.UI.Areas.Admin.Models.DTO.CategoryDTO
+<div class="container-fluid">
+    <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/Admin/Home/Index">Ana Sayfa</a></li>
+        <li class="breadcrumb-item"><a href="/Admin/Category/List">Kategoriler</a></li>
+        <li class="breadcrumb-item">Kategori Güncelle</li>
+    </ul>
+    <hr>
+    <form action="/Admin/Category/Update" method="post" class="col-md-6 col-md-offset-3" style="margin-top:50px;">
+        <div class="form-group">
+            <label for="Name">Kategori İsmi</label>
+            <input type="text" name="Name" value="@Model.Name" class="form-control" />
+        </div>
+        <input type="text" style="visibility:hidden" name="ID" value="@Model.ID" />
+        <input type="submit" name="name" value="Güncelle" class="form-control btn btn-primary" />
+    </form>
+</div>
+

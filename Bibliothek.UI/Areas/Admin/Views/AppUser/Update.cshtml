@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "Update";
+    Layout = "~/Areas/Admin/Views/Shared/_SharedAdminLayout.cshtml";
+}
+
+@model Bibliothek.UI.Areas.Admin.Models.DTO.AppUserDTO
+<div class="container-fluid">
+    <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/Admin/Home/Index">Ana Sayfa</a></li>
+        <li class="breadcrumb-item"><a href="/Admin/AppUser/List">Kullanıcılar</a></li>
+        <li class="breadcrumb-item">Kullanıcı Güncelle</li>
+    </ul>
+    <hr>
+    <form action="/Admin/AppUser/Update" method="post" class="col-md-6 col-md-offset-3" style="margin-top:50px;">
+        <div class="form-group">
+            <label for="Name">Adı</label>
+            <input type="text" name="Name" value="@Model.Name" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="LastName">Soyadı</label>
+            <input type="text" name="LastName" value="@Model.LastName" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="UserName">Kullanıcı Adı</label>
+            <input type="text" name="UserName" value="@Model.Username" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="Password">Kullanıcı Şifresi</label>
+            <input type="text" name="Password" value="@Model.Password" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="Role">Kullanıcı Rolü</label>
+            <select name="Role" class="form-control">
+                @foreach (var item in Enum.GetNames(typeof(Bibliothek.Model.Entity.Role)))
+                {
+                    <option value="@item">@item</option>
+                }
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="Status">Kullanıcı Durumu</label>
+            <select name="Status" class="form-control">
+                @foreach (var item in Enum.GetNames(typeof(Bibliothek.Core.Enum.Status)))
+                {
+                    <option value="@item">@item</option>
+                }
+            </select>
+        </div>
+        <input type="text" style="visibility:hidden" name="ID" value="@Model.ID" />
+        <input style="margin-bottom:10px;" type="submit" name="name" value="Güncelle" class="form-control btn btn-primary" />
+    </form>
+</div>
+

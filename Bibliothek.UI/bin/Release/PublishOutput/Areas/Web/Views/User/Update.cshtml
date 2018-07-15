@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "Update";
+    Layout = "~/Areas/Web/Views/Shared/_SharedWebLayout.cshtml";
+}
+
+@model Bibliothek.UI.Areas.Web.Models.DTO.UserDTO
+<div class="container col-lg-12 offset-2">
+    <form action="/Web/User/Update" method="post" class="col-lg-8 offset-2" style="margin-top:30px;">
+        <div>
+            <h3 class="text-center">Bilgilerimi Güncelle</h3>
+        </div>
+        <div class="form-group">
+            <label for="Name">Adı</label>
+            <input type="text" name="Name" value="@Model.Name" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="LastName">Soyadı</label>
+            <input type="text" name="LastName" value="@Model.LastName" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="Password">Kullanıcı Şifresi</label>
+            <input type="text" name="Password" value="@Model.Password" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="Address">Adres</label>
+            <input type="text" name="Address" value="@Model.Address" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="Phone">Telefon</label>
+            <input type="text" name="Phone" value="@Model.Phone" class="form-control" />
+        </div>
+        <input type="text" style="visibility:hidden" name="ID" value="@Model.ID" />
+        <input type="submit" name="name" value="Güncelle" class="form-control btn btn-primary" style="margin-bottom:30px;" />
+    </form>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#CategoryList").toggle();
+    });
+</script>
+
+

@@ -1,0 +1,5 @@
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.Utility\bin\Release\Bibliothek.Utility.dll
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.Utility\bin\Release\Bibliothek.Utility.pdb
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.Utility\obj\Release\Bibliothek.Utility.csproj.CoreCompileInputs.cache
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.Utility\obj\Release\Bibliothek.Utility.dll
+C:\Users\bgokk\Desktop\Bibliothek Project\Bibliothek\Bibliothek.Utility\obj\Release\Bibliothek.Utility.pdb

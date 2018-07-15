@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "NotAuthorized";
+    Layout = "~/Areas/Admin/Views/Shared/_SharedAdminLayout.cshtml";
+}
+
+<link href="~/Content/Css/login-register.css" rel="stylesheet" />
+<div class="container" style="margin-top:50px;">
+    <div class="row">
+        <div class="col-lg-6 offset-3">
+            <div class="form-header">
+                <h2 class="text-center"><i class="fa fa-ban" aria-hidden="true"></i> Yetki Hatası !</h2>
+            </div>
+            <div class="main-content">
+                <div class="text-success">
+                    <h3>Bu sayfaya erişim yetkiniz bulunmamaktadır. Lütfen site yöneticinizle iletişime geçiniz... </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("footer").toggle();
+
+        setTimeout(function () {
+            window.location = "/Admin/Home/Index";
+        }, 5000)
+    });
+
+</script>
+

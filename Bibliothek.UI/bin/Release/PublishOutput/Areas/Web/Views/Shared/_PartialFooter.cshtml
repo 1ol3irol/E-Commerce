@@ -1,0 +1,57 @@
+﻿
+@model List<Bibliothek.Model.Entity.Menu>
+
+
+<footer class="py-5 bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <h5 class="m-0 text-center text-white">
+                    <strong>
+                        Site Haritası
+                    </strong>
+                </h5>
+                <hr />
+                <p class="m-0 text-center text-white">
+                    @*<a href="/Web/Product/Index/08c6fbb8-cc35-e811-9955-1c4d70f6b372">Kitap</a><br />
+                    <a href="/Web/Product/Index/92c51701-cd35-e811-9955-1c4d70f6b372">Film</a><br />
+                    <a href="/Web/Product/Index/1e7f5008-cd35-e811-9955-1c4d70f6b372">Müzik</a><br />
+                    <a href="/Web/Product/Index/981ac613-cd35-e811-9955-1c4d70f6b372">Hobi & Oyuncak</a>*@
+                    @foreach (var item in Model)
+                    {
+                        <a href="#">@item.Name</a><br />
+                    }
+                    
+                </p>
+            </div>
+            <div class="col-lg-4">
+                <h5 class="m-0 text-center text-white">
+                    <strong>
+                        Birol Kitabevi
+                    </strong>
+                </h5>
+                <hr />
+                <p class="m-0 text-center text-white">Tüm Hakları Saklıdır &copy;<br /> Birol Gökkaya @DateTime.Now.Year</p>
+            </div>
+            <div class="col-lg-4">
+                <h5 class="m-0 text-center text-white">
+                    <strong>
+                        E-Bülten Üyeliği
+                    </strong>
+                </h5>
+                <hr />
+                <div class="m-0 text-white col-md-12">
+                    <p class="text-center">
+                        Kampanyalardan haberdar olmak için e-posta adresinizi giriniz
+                    </p>
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="e-posta adresiniz..." />
+                        <span class="input-group-btn">
+                            <button id="email" class="btn btn-primary" type="button" data-toggle="modal" data-target="#SendEMail"><i class="fa fa-paper-plane" aria-hidden="true"></i> Gönder</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

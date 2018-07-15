@@ -1,0 +1,56 @@
+﻿@using PagedList;
+@using PagedList.Mvc
+
+@model IPagedList<Bibliothek.Model.Entity.Product>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Web/Views/Shared/_SharedWebLayout.cshtml";
+}
+
+<link href="~/Content/Css/PagedList.css" rel="stylesheet" />
+<script src="~/Content/Scripts/jquery.min.js"></script>
+
+<div class="row" style="margin-top:50px;">
+    @foreach (var item in Model)
+    {
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+                <a href="/Web/Product/ProductDetails/@item.ID"><img class="card-img-top" src="@item.ImagePath" width="50" height="300" alt=""></a>
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <a href="/Web/Product/ProductDetails/@item.ID">@item.Name</a>
+                    </h5>
+                    <hr />
+                    <p class="card-text">
+                        @if (item.Description.Length > 150)
+                        {
+                            @item.Description.Substring(0, 150)<span>...</span>
+                        }
+                        else
+                        {
+                            @item.Description
+                        }
+                    </p>
+                </div>
+                <div class="card-footer" id="data">
+                    <div class="pull-left">
+                        <h5>@item.Price ₺</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<div class="pagedList">
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page }), PagedListRenderOptions.Classic)
+</div>
+
+@*@section footer{
+    @Html.Partial("_PartialFooter")
+}*@
+
+
+
+
+
